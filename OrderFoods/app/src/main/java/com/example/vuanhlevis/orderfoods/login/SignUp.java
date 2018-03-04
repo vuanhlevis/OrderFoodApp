@@ -56,6 +56,7 @@ public class SignUp extends AppCompatActivity {
                                 data_user.child(et_phone.getText().toString()).setValue(user);
 
                                 Toast.makeText(SignUp.this, "Successfully!!!", Toast.LENGTH_SHORT).show();
+
                                 finish();
                             }
 

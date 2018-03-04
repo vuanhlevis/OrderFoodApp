@@ -21,7 +21,9 @@ import android.widget.Toast;
 
 import com.example.vuanhlevis.orderfoods.Interface.ItemClickListener;
 import com.example.vuanhlevis.orderfoods.common.Common;
+import com.example.vuanhlevis.orderfoods.login.SignIn;
 import com.example.vuanhlevis.orderfoods.models.Category;
+import com.example.vuanhlevis.orderfoods.models.Order;
 import com.example.vuanhlevis.orderfoods.viewHolder.MenuViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DatabaseReference;
@@ -59,8 +61,8 @@ public class Home extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent cartIntent = new Intent(Home.this, Cart.class);
+                startActivity(cartIntent);
             }
         });
 
@@ -161,11 +163,17 @@ public class Home extends AppCompatActivity
         if (id == R.id.nav_menu) {
             // Handle the camera action
         } else if (id == R.id.nav_cart) {
+            Intent intentCart = new Intent(Home.this, Cart.class);
+            startActivity(intentCart);
 
         } else if (id == R.id.nav_order) {
+            Intent intentOrder = new Intent(Home.this, OrderStatus.class);
+            startActivity(intentOrder);
 
         } else if (id == R.id.nav_logout) {
-
+            Intent intentSignIn = new Intent(Home.this, SignIn.class);
+            intentSignIn.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intentSignIn);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

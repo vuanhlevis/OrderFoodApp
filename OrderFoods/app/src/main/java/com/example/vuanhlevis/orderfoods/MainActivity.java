@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.vuanhlevis.orderfoods.common.Common;
 import com.example.vuanhlevis.orderfoods.login.SignIn;
 import com.example.vuanhlevis.orderfoods.login.SignUp;
 
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, SignIn.class);
                 startActivity(intent);
+                finish();
             }
         });
 

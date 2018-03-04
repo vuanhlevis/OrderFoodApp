@@ -59,6 +59,7 @@ public class SignIn extends AppCompatActivity {
                             // get user infor
 
                             User user = dataSnapshot.child(et_phone.getText().toString()).getValue(User.class);
+                            user.setPhone(et_phone.getText().toString());
 
                             if (et_pass.getText().length() > 0 && et_phone.getText().length() > 0) {
                                 if (user.getPassword().equals(et_pass.getText().toString())) {
@@ -66,7 +67,6 @@ public class SignIn extends AppCompatActivity {
                                     Common.currUser = user;
                                     startActivity(intenthome);
                                     finish();
-
 
                                 } else {
                                     Toast.makeText(SignIn.this, "Failed", Toast.LENGTH_SHORT).show();

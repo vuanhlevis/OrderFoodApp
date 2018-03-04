@@ -37,9 +37,14 @@ dependencies {
     compile 'com.firebaseui:firebase-ui-database:0.4.1'
     implementation 'com.android.support:design:26+'
     compile 'com.cepheuen.elegant-number-button:lib:1.0.2'
+    compile 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+    compile 'com.readystatesoftware.sqliteasset:sqliteassethelper:+'
+    implementation 'com.github.mancj:MaterialSearchBar:0.7.6'
 
 
 }
+
+
 
 
 
